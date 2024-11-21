@@ -84,7 +84,7 @@ public class DriveSubsystem extends SubsystemBase {
 
     // Limelight stuff
     RawDetection[] detections = LimelightHelpers.getRawDetections(null);
-    System.out.println(detections[0].classId + "; " + detections[0].corner0_X + "; " + detections[0].corner0_Y);
+    if(detections.length>0) System.out.println(detections[0].classId + "; " + detections[0].corner0_X + "; " + detections[0].corner0_Y);
   }
 
   /**
