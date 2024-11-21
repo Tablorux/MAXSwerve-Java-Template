@@ -57,9 +57,6 @@ public class RobotContainer {
                 -MathUtil.applyDeadband(m_driverController.getRightX(), OIConstants.kDriveDeadband),
                 true, true),
             m_robotDrive));
-        new RunCommand(() -> {
-            RawDetection[] detections = LimelightHelpers.getRawDetections(null);
-        }, null);
   }
 
   /**
