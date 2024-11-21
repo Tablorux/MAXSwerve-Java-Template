@@ -16,6 +16,8 @@ import edu.wpi.first.util.WPIUtilJNI;
 import edu.wpi.first.wpilibj.ADIS16470_IMU;
 import edu.wpi.first.wpilibj.ADIS16470_IMU.IMUAxis;
 import frc.robot.Constants.DriveConstants;
+import frc.robot.LimelightHelpers;
+import frc.robot.LimelightHelpers.RawDetection;
 import frc.utils.SwerveUtils;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
@@ -79,6 +81,10 @@ public class DriveSubsystem extends SubsystemBase {
             m_rearLeft.getPosition(),
             m_rearRight.getPosition()
         });
+
+    // Limelight stuff
+    RawDetection[] detections = LimelightHelpers.getRawDetections(null);
+    System.out.println(detections[0].classId + "; " + detections[0].corner0_X + "; " + detections[0].corner0_Y);
   }
 
   /**
